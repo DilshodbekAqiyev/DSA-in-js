@@ -33,3 +33,17 @@ var climbStairs = function (n) {
 };
 
 console.log(climbStairs(3)); // 3
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs = function (n) {
+  if (n <= 2) {
+    return n;
+  }
+
+  return climbStairs(n - 1) + climbStairs(n - 2);
+};
+
+// n = 44 => Time Limit Exceeded
